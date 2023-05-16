@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mason.Yahtzee.view.MainActivity">
+
+    <item
+        android:id="@+id/action_new_game"
+        android:icon="@drawable/baseline_add_circle_outline_24"
+        android:orderInCategory="100"
+        android:title="@string/action_new_game"
+        app:showAsAction="ifRoom"/>
+
+</menu>

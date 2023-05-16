@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Yahtzee</string>
+
+    <string name="dice_one">Dice with number one</string>
+    <string name="dice_two">Dice with number two</string>
+    <string name="dice_three">Dice with number three</string>
+    <string name="dice_four">Dice with number four</string>
+    <string name="dice_five">Dice with number five</string>
+    <string name="dice_six">Dice with number six</string>
+
+    <string name="three_of_a_kind">3x</string>
+    <string name="four_of_a_kind">4x</string>
+    <string name="full_house">Full House</string>
+    <string name="small_straight">Small Straight</string>
+    <string name="large_straight">Large Straight</string>
+    <string name="yahtzee">Yahtzee</string>
+    <string name="chance">Chance</string>
+    <string name="bonus">Bonus</string>
+
+    <string name="roll">Roll</string>
+    <string name="play">Play</string>
+    <string name="image_dice_description">Dice with a specific number on it</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="create">Create</string>
+    <string name="first_player_nickname">1st player nickname</string>
+    <string name="second_player_nickname">2nd player nickname</string>
+    <string name="action_new_game">New Game</string>
+    <string name="error_valid_nickname">Enter valid nickname</string>
+
+    <string name="btn_roll_in_game"> Roll %s - %s</string>
+    <string name="tv_winner_message"> %s Wins!</string>
+    <string name="et_bonus_value"> %s/63</string>
+    <string name="toast_need_roll"> You need to roll first</string>
+    <string name="toast_set_filled"> Set is already filled</string>
+
+
+</resources>

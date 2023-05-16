@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_total_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFirstPlayerResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textSize="@dimen/textsize_large"
+                    android:gravity="center"
+                    android:textColor="?android:attr/textColorSecondary"
+                    tools:text="100"/>
+
+                <TextView
+                    android:id="@+id/tvFirstPlayerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="@dimen/textsize_large"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    tools:text="You"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvSecondPlayerResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:gravity="center"
+                    android:textSize="@dimen/textsize_large"
+                    android:textColor="?android:attr/textColorSecondary"
+                    tools:text="100"/>
+
+                <TextView
+                    android:id="@+id/tvSecondPlayerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:gravity="center"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="@dimen/textsize_large"
+                    android:textStyle="bold"
+                    tools:text="Them"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvWinnerResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="@dimen/textsize_large"
+                android:textColor="?android:attr/textColorSecondary"
+                tools:text="Winner is Player"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_scores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/linear_layout_total_score"
+            app:layout_constraintStart_toStartOf="@id/linear_layout_total_score"
+            app:layout_constraintTop_toBottomOf="@id/linear_layout_total_score">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvFirstPlayerLeftEmpty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="Player 1"/>
+                
+                <TextView
+                    android:id="@+id/tvFirstPlayerLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:textSize="@dimen/textsize_medium"
+                    tools:text="Player 1"/>
+
+                <TextView
+                    android:id="@+id/tvSecondPlayerLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_medium"
+                    android:textStyle="bold"
+                    tools:text="Player2"/>
+                
+                <TextView
+                    android:id="@+id/tvSecondPlayerLeftEmpty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_medium"
+                    android:textStyle="bold"
+                    tools:text="Player 2"/>
+
+                <TextView
+                    android:id="@+id/tvFirstPlayerRight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_medium"
+                    android:textStyle="bold"
+                    tools:text="Player 1"/>
+
+                <TextView
+                    android:id="@+id/tvSecondPlayerRight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_medium"
+                    android:textStyle="bold"
+                    tools:text="Player 2"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <ImageView
+                    android:id="@+id/ivDiceOne"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_small"
+                    android:contentDescription="@string/dice_one"
+                    app:srcCompat="@drawable/diceone"/>
+                
+                <EditText
+                    android:id="@+id/etDiceOneFirstPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/etDiceOneSecondPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tvThreeOfKind"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_medium"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/three_of_a_kind"/>
+
+                <EditText
+                    android:id="@+id/etThreeOfKindFirstPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/etThreeOfKindSecondPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <ImageView
+                    android:id="@+id/ivDiceTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_small"
+                    android:contentDescription="@string/dice_two"
+                    app:srcCompat="@drawable/dicetwo"/>
+
+                <EditText
+                    android:id="@+id/etDiceTwoFirstPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/etDiceTwoSecondPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tvFourOfKind"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_medium"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/four_of_a_kind"/>
+
+                <EditText
+                    android:id="@+id/etFourOfKindFirstPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/etFourOfKindSecondPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+                
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivDiceThree"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/margin_small"
+                android:contentDescription="@string/dice_three"
+                app:srcCompat="@drawable/dicethree"/>
+
+            <EditText
+                android:id="@+id/etDiceThreeFirstPlayer"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/et_points"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:textSize="@dimen/textsize_large"
+                tools:text="10"
+                android:background="@drawable/yellowcard"
+                android:layout_margin="@dimen/margin_xsmall"
+                android:focusable="false"/>
+
+            <EditText
+                android:id="@+id/etDiceThreeSecondPlayer"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/et_points"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:textSize="@dimen/textsize_large"
+                tools:text="10"
+                android:background="@drawable/yellowcard"
+                android:layout_margin="@dimen/margin_xsmall"
+                android:focusable="false"/>
+
+            <TextView
+                android:id="@+id/tvFullHouse"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/textsize_medium"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/full_house"/>
+
+            <EditText
+                android:id="@+id/etFullHouseFirstPlayer"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/et_points"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:textSize="@dimen/textsize_large"
+                tools:text="10"
+                android:background="@drawable/yellowcard"
+                android:layout_margin="@dimen/margin_xsmall"
+                android:focusable="false"/>
+
+            <EditText
+                android:id="@+id/etFullHouseSecondPlayer"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/et_points"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:textSize="@dimen/textsize_large"
+                tools:text="10"
+                android:background="@drawable/yellowcard"
+                android:layout_margin="@dimen/margin_xsmall"
+                android:focusable="false"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivDiceFour"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_small"
+                    android:contentDescription="@string/dice_four"
+                    app:srcCompat="@drawable/dicefour"/>
+
+                <EditText
+                    android:id="@+id/edDiceFourFirstPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/edDiceFourSecondPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tvSmallStraight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_medium"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/small_straight"/>
+
+                <EditText
+                    android:id="@+id/etSmallStraightFirstPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/etSmallStraightSecondPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivDiceFive"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/margin_small"
+                    android:contentDescription="@string/dice_five"
+                    app:srcCompat="@drawable/dicefive"/>
+
+                <EditText
+                    android:id="@+id/etDicefiveFirstPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/etDicefiveSecondPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tvLargeStraight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_medium"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/large_straight"/>
+
+                <EditText
+                    android:id="@+id/etLargeStraightFirstPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/etLargeStraightSecondPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_small"
+                    android:focusable="false"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBonus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/margin_small"
+                android:contentDescription="@string/dice_six"
+                app:srcCompat="@drawable/dicesix"/>
+
+            <EditText
+                android:id="@+id/etDiceSixFirstPlayer"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/et_points"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:textSize="@dimen/textsize_large"
+                tools:text="10"
+                android:background="@drawable/yellowcard"
+                android:layout_margin="@dimen/margin_xsmall"
+                android:focusable="false"/>
+
+            <EditText
+                android:id="@+id/etDiceSixSecondPlayer"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/et_points"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:textSize="@dimen/textsize_large"
+                tools:text="10"
+                android:background="@drawable/yellowcard"
+                android:layout_margin="@dimen/margin_xsmall"
+                android:focusable="false"/>
+
+            <TextView
+                android:id="@+id/tvYahtzee"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/textsize_medium"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/yahtzee"/>
+
+            <EditText
+                android:id="@+id/etYahtzeeFirstPlayer"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/et_points"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:textSize="@dimen/textsize_large"
+                tools:text="10"
+                android:background="@drawable/yellowcard"
+                android:layout_margin="@dimen/margin_xsmall"
+                android:focusable="true"/>
+
+            <EditText
+                android:id="@+id/etYahtzeeSecondPlayer"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/et_points"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_small"
+                android:textSize="@dimen/textsize_large"
+                tools:text="10"
+                android:background="@drawable/yellowcard"
+                android:layout_margin="@dimen/margin_small"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvBonus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/dice_one"
+                    android:text="@string/bonus"
+                    android:textSize="@dimen/textsize_medium"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etBonusFirstPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/etBonusSecondPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/tvChance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textsize_medium"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/chance"/>
+
+                <EditText
+                    android:id="@+id/etChanceFirstPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/etChanceSecondPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/et_points"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:textSize="@dimen/textsize_large"
+                    tools:text="10"
+                    android:background="@drawable/yellowcard"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:focusable="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:layout_marginEnd="@dimen/padding_small"
+            android:layout_marginStart="@dimen/padding_small"
+            android:layout_marginTop="@dimen/padding_small"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="@id/linear_layout_scores"
+            app:layout_constraintStart_toStartOf="@+id/linear_layout_scores"
+            app:layout_constraintEnd_toEndOf="@id/linear_layout_scores"/>
+
+        <Button
+            android:id="@+id/btnRoll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:text="@string/roll"
+            android:textSize="@dimen/textsize_medium"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yahtzeeOrange"
+            app:layout_constraintEnd_toEndOf="@id/rvDices"
+            app:layout_constraintStart_toStartOf="@id/rvDices"
+            app:layout_constraintTop_toBottomOf="@id/rvDices"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>
